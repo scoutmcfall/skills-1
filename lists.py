@@ -36,7 +36,7 @@ def words_in_common(words1, words2):
             #get rid of duplicates somehow- use a set and then a list?
     #for word in in_common:
        # if word in in_common[i+1:]:
-
+    #in_common = set(in_common)
     return in_common
     # TODO: replace this with your code
 #am I just comparing words 1 and 2?
@@ -77,9 +77,16 @@ def get_index(items, value):
     """
     index = []
     for i in items:
-        if i in value:
-            index.append(items[i])
-    return index
+        if value in i:
+            index.append(i, items[i])
+        else:
+            return None
+    #return index
+    #index = []
+    #for i in items:
+        #if items[i] in value:
+            #index.append(i)
+    #return index
     # TODO: replace this with your code
 
 
