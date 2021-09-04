@@ -7,7 +7,11 @@ should behave, see the examples in test_lists.py.
 
 def get_words_by_first_letter(words, letter):
     """Return a list of all words that start with the given letter."""
-
+    word_l = []
+    for word in words:
+        if letter in word[0]:
+            word_l.append(word)
+    return word_l
     # TODO: replace this with your code
 
 
