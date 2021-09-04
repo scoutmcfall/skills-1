@@ -7,11 +7,11 @@ should behave, see the examples in test_functions.py.
 
 def is_all_berries(fruits):
     """Return True if all items in fruits are valid berries."""
-
+    
     for fruit in fruits:
         if not is_berry(fruit):
             return False
-
+        
     return True
 
 
@@ -21,7 +21,11 @@ def is_berry(fruit):
     Valid berries are "strawberry", "raspberry", "blackberry", and "currant".
     There are no other valid berries. For example, "berry" is not a valid berry.
     """
-
+    valid_berries = ["strawberry", "raspberry", "blackberry", "currant"]
+    if fruit in valid_berries:
+        return True
+    else:
+        return False
     # TODO: replace this with your code
 
 
