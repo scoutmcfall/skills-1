@@ -17,7 +17,12 @@ def get_words_by_first_letter(words, letter):
 
 def filter_by_length(items, length):
     """Return a list of all items with the given length."""
-
+    item_l = []
+    for item in items:
+        if len(item) == length:
+            item_l.append(item)
+    return item_l    
+    
     # TODO: replace this with your code
 
 
