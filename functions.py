@@ -8,11 +8,14 @@ should behave, see the examples in test_functions.py.
 def is_all_berries(fruits):
     """Return True if all items in fruits are valid berries."""
     
-    for fruit in fruits:
-        if not is_berry(fruit):
-            return False
+    #for fruit in fruits:
+        #if is_berry(fruit) == True
+            #break
+        #else:
+           # continue
         
-    return True
+        
+    #return True
 
 
 def is_berry(fruit):
@@ -51,6 +54,10 @@ def create_fullname(profile):
     the user's hometown. Ex.: ("Hack", "Bright", "San Francisco").
     """
 
+    #for line in profile:
+        #first_name = profile[0]
+        #last_name = profile[1]
+    return (profile[0] , profile[1])
     # TODO: replace this with your code
 
 
@@ -61,8 +68,11 @@ def has_same_hometown(profile1, profile2):
     the user's first name, the second is the user's last name, and the third is
     the user's hometown. Ex.: ("Hack", "Bright", "San Francisco").
     """
-
-    # TODO: replace this with your code
+    if profile1[2] in profile2[2]:
+        return True
+    else:
+        return False
+   
 
 
 def get_sqrt(x):
@@ -92,8 +102,7 @@ def div(x, y):
 
     In other words, return the result of dividing x by y.
     """
-
-    # TODO: replace this with your code
+    return x / y
 
 
 def avg(x, y):
@@ -102,8 +111,7 @@ def avg(x, y):
     Here, the average of x and y is the mean of x and y. In other words, it's
     computed by dividing the sum of x and y by 2.
     """
-
-    # TODO: replace this with your code
+    return (x + y)/2
 
 
 def is_close_enough(x, y):
@@ -112,14 +120,20 @@ def is_close_enough(x, y):
     In other words, return True if the absolute value of x minus y is less than
     0.0001.
     """
-
-    # TODO: replace this with your code
+    z = (x - y)
+    av = 0.0001
+    if z < av:
+        return True
+    else:
+        return False
+    
 
 
 def concat_all(items, *additional_items):
     """Add all arguments to the end of items and return None."""
 
-    # TODO: replace this with your code
+    items.extend(additional_items)
+    return None
 
 
 if __name__ == "__main__":
