@@ -28,13 +28,31 @@ def filter_by_length(items, length):
 
 def words_in_common(words1, words2):
     """Return strings that words1 and words2 have in common."""
+    in_common = []
+#make a list out of each word and iterate through each one?
+    for letter in list(words1):
+        if letter in list(words2):
+            in_common.append(letter)
+            #get rid of duplicates somehow- use a set and then a list?
+    #for word in in_common:
+       # if word in in_common[i+1:]:
 
+    return in_common
     # TODO: replace this with your code
+#am I just comparing words 1 and 2?
+    #if words1 == words2:
+        #in_common.append(words1)
+    #return in_common
 
 
 def every_other_item(items):
     """Return a list with every other element items (start with index 0)."""
-
+    every_other = []
+    #for item in items:
+        #every_other.append(item)
+        #items[i]
+    every_other.extend(items[0::2])
+    return every_other 
     # TODO: replace this with your code
 
 
@@ -43,7 +61,11 @@ def smallest_n_items(items, n):
 
     You can assume that `n` will be less than the length of the list.
     """
-
+    items.sort()
+    #list.reverse()?
+    smallest_items = items[0:n]
+    smallest_items.reverse()
+    return smallest_items
     # TODO: replace this with your code
 
 
@@ -53,7 +75,11 @@ def get_index(items, value):
     If the value doesn't exist in items, return None. If the value appears more
     than once, return the index of the first occurrence of the value.
     """
-
+    index = []
+    for i in items:
+        if i in value:
+            index.append(items[i])
+    return index
     # TODO: replace this with your code
 
 
