@@ -29,16 +29,16 @@ def filter_by_length(items, length):
 def words_in_common(words1, words2):
     """Return strings that words1 and words2 have in common."""
     in_common = []
-#make a list out of each word and iterate through each one?
-    for letter in list(words1):
-        if letter in list(words2):
-            in_common.append(letter)
+    for word in words1:
+        if word in words2:
+            in_common.append(word)
             #get rid of duplicates somehow- use a set and then a list?
-    #for word in in_common:
-       # if word in in_common[i+1:]:
+    for word in in_common:
+       if word in in_common[1:]:
+           in_common.pop(word)
     #in_common = set(in_common)
     return in_common
-    # TODO: replace this with your code
+    
 #am I just comparing words 1 and 2?
     #if words1 == words2:
         #in_common.append(words1)
@@ -78,7 +78,10 @@ def get_index(items, value):
     index = []
     for i in items:
         if value in i:
-            index.append(i, items[i])
+            index.append(items[i])
+            return index
+        elif value not in i:
+            continue
         else:
             return None
     #return index
@@ -87,7 +90,9 @@ def get_index(items, value):
         #if items[i] in value:
             #index.append(i)
     #return index
-    # TODO: replace this with your code
+    
+    #make a list of tuples consisting of value, index
+    #if value in tuple list, return index?
 
 
 if __name__ == "__main__":

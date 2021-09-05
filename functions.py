@@ -7,15 +7,12 @@ should behave, see the examples in test_functions.py.
 
 def is_all_berries(fruits):
     """Return True if all items in fruits are valid berries."""
-    
-    #for fruit in fruits:
-        #if is_berry(fruit) == True
-            #break
-        #else:
-           # continue
-        
-        
-    #return True
+
+    for fruit in fruits:      
+        if not is_berry(fruit):        
+            return False
+
+    return True
 
 
 def is_berry(fruit):
@@ -29,7 +26,7 @@ def is_berry(fruit):
         return True
     else:
         return False
-    # TODO: replace this with your code
+    
 
 
 def create_intro_note(profile1, profile2):
@@ -77,9 +74,9 @@ def has_same_hometown(profile1, profile2):
 
 def get_sqrt(x):
     """Return the square root of x."""
-
+    
     guess = 1
-
+    
     while True:
         div_result = div(x, guess)
 
@@ -103,6 +100,16 @@ def div(x, y):
     In other words, return the result of dividing x by y.
     """
     return x / y
+     # high = 0
+    # low = 0
+    # if guess ** 2 == x:
+    #     return guess
+    # if guess ** 2 > x:
+    #     print("too high! guess lower")
+    #     high = guess
+    # else:
+    #     print("too low! guess higher")
+    #     low = guess
 
 
 def avg(x, y):
