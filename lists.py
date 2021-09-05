@@ -76,12 +76,12 @@ def get_index(items, value):
     If the value doesn't exist in items, return None. If the value appears more
     than once, return the index of the first occurrence of the value.
     """
-    index = []
-    for i in items:
-        if value in i:
-            index = items[i]
-            return index
-        elif value not in i:
+    #index = []
+    for i in range(len(items)):
+        if items[i] in value:
+            #index = items[i]
+            return i #still not returning the index
+        elif value not in items[i]:
             continue
         else:
             return None
