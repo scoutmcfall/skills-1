@@ -13,7 +13,7 @@ def is_all_berries(fruits):
             return False
 
     return True
-
+#sorry, I tried to put everything back the way the test says but i'm still getting the "modified" error
 
 def is_berry(fruit):
     """Return True if fruit is a valid berry.
@@ -41,6 +41,7 @@ def create_intro_note(profile1, profile2):
         note_contents.append(f"Looks like y'all are from the same hometown!")
     
     return "\n".join(note_contents)
+#sorry, I tried to put everything back the way the test says but i'm still getting the "modified" error
 
 
 def create_fullname(profile):
@@ -92,6 +93,7 @@ def get_sqrt(x):
             guess = avg(div_result, guess)
         else:
             return guess
+#sorry, I tried to put everything back the way the test says but i'm still getting the "modified" error
 
 
 def div(x, y):
@@ -119,7 +121,8 @@ def avg(x, y):
     Here, the average of x and y is the mean of x and y. In other words, it's
     computed by dividing the sum of x and y by 2.
     """
-    return ((x + y)/2)
+    average = ((x+y)/2)
+    return average
 
 
 def is_close_enough(x, y):
@@ -131,7 +134,7 @@ def is_close_enough(x, y):
     z = (x-y)
     a = 0.0001
     #how to do absolute value? multiply x-y by itself and then divide by x-y? nope
-    if z < a:
+    if -a < z < a:
         return True
     else:
         return False
