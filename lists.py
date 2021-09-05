@@ -32,11 +32,12 @@ def words_in_common(words1, words2):
     for word in words1:
         if word in words2:
             in_common.append(word)
-            #get rid of duplicates somehow- use a set and then a list?
-    for i in in_common:
-       if i in in_common[1:]:
+            #get rid of duplicates by searching the rest of the list
+    for i in range(len(in_common)-1):
+       if in_common[i] in in_common[i+1:]:
            #take the word out
-           in_common.pop(in_common[i])
+           #in_common.pop(in_common[i])
+           del (in_common[i])
     #in_common = set(in_common)
     return in_common
     
