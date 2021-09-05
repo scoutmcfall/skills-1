@@ -39,7 +39,7 @@ def create_intro_note(profile1, profile2):
 
     if has_same_hometown(profile1, profile2):
         note_contents.append(f"Looks like y'all are from the same hometown!")
-
+    
     return "\n".join(note_contents)
 
 
@@ -54,7 +54,7 @@ def create_fullname(profile):
     #for line in profile:
         #first_name = profile[0]
         #last_name = profile[1]
-    return (profile[0] , profile[1])
+    return (profile[0] + " " + profile[1])
     # TODO: replace this with your code
 
 
@@ -99,8 +99,9 @@ def div(x, y):
 
     In other words, return the result of dividing x by y.
     """
-    return x / y
-     # high = 0
+    return (x/y)
+    #I thought i was supposed to work on the get sqr rt function because i was getting errors in it but I guess not! anyways this is what i wrote in there before deleting it.
+    # high = 0
     # low = 0
     # if guess ** 2 == x:
     #     return guess
@@ -118,7 +119,7 @@ def avg(x, y):
     Here, the average of x and y is the mean of x and y. In other words, it's
     computed by dividing the sum of x and y by 2.
     """
-    return (x + y)/2
+    return ((x + y)/2)
 
 
 def is_close_enough(x, y):
@@ -127,9 +128,10 @@ def is_close_enough(x, y):
     In other words, return True if the absolute value of x minus y is less than
     0.0001.
     """
-    z = (x - y)
-    av = 0.0001
-    if z < av:
+    z = (x-y)
+    a = 0.0001
+    #how to do absolute value? multiply x-y by itself and then divide by x-y? nope
+    if z < a:
         return True
     else:
         return False
